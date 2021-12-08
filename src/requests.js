@@ -5,7 +5,7 @@ export const API_KEY = "ce153341a8faae98ab0def899c8728a9";
 export const YOUTUBE_BASE_URL = "https://www.youtube.com/watch?v=";
 export const YOUTUBE_THUMBNAIL_URL = (key) =>
   `https://img.youtube.com/vi/${key}/0.jpg`;
-export const SERVER_URL = "http://localhost:8800";
+export const SERVER_URL = "https://my-flix-backend.herokuapp.com/";
 
 export const requests = {
   Trending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
