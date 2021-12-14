@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
             Authorization: token,
           },
         };
-        let { data } = await axios.post(`${SERVER_URL}/signinWithID`, config);
+        let { data } = await axios.post("https://my-flix-backend.herokuapp.com/signinWithID", config);
 
         if (data.message === "jwt expired") {
           localStorage.clear();
@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
   }, [history]);
 
   const signin = async (email, password) => {
-    let res = await axios.post(`${SERVER_URL}/signin`, {
+    let res = await axios.post("https://my-flix-backend.herokuapp.com/signin", {
       email,
       password,
     });
@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const signup = async (email, password) => {
-    let { data } = await axios.post(`${SERVER_URL}/signup`, {
+    let { data } = await axios.post("https://my-flix-backend.herokuapp.com/signup", {
       email,
       password,
     });
