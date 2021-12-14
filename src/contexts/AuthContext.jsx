@@ -1,7 +1,6 @@
 import { useContext, createContext, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import { SERVER_URL } from "../requests";
 
 const AuthContext = createContext();
 
