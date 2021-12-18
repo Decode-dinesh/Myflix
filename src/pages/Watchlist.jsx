@@ -3,7 +3,7 @@ import axios from "axios";
 
 import { useAuth } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
-import { IMAGE_BASE_URL } from "../requests";
+import { IMAGE_BASE_URL, SERVER_URL } from "../requests";
 
 const Watchlist = () => {
   const [watchlist, setWatchlist] = useState([]);
@@ -11,7 +11,7 @@ const Watchlist = () => {
 
   useEffect(() => {
     const fetchWatchlist = async () => {
-      let { data } = await axios.post("https://my-flix-backend.herokuapp.com/getWatchlist", {
+      let { data } = await axios.post(`${SERVER_URL}/getWatchlist`, {
         id: currentUser.id,
       });
       setWatchlist(data);

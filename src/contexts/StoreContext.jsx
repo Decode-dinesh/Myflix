@@ -71,4 +71,4 @@ const StoreProvider = ({ children }) => {
   );
 };
 
-export default StoreProvider;
+export default StoreProvider

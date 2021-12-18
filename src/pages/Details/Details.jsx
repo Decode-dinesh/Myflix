@@ -8,6 +8,7 @@ import {
   getSimilar,
   IMAGE_BASE_URL,
   IMAGE_BASE_URL_HD,
+  SERVER_URL,
   YOUTUBE_BASE_URL,
   YOUTUBE_THUMBNAIL_URL,
 } from "../../requests";
@@ -42,7 +43,7 @@ const Details = () => {
           content_id: details.id,
         };
         let { data } = await axios.post(
-          "https://my-flix-backend.herokuapp.com/checkWatchlist",
+          `${SERVER_URL}/checkWatchlist`,
           watchlistCheck
         );
         if (data.success) {
@@ -56,7 +57,7 @@ const Details = () => {
   }, [currentUser, details]);
 
   const handleWatchlistClick = async () => {
-    let { data } = await axios.post("https://my-flix-backend.herokuapp.com/addWatchlist", {
+    let { data } = await axios.post(`${SERVER_URL}/addWatchlist`, {
       id: currentUser.id,
       media_type: category,
       content_id: details.id,
@@ -77,7 +78,7 @@ const Details = () => {
         content_id: details.id,
       };
       let { data } = await axios.post(
-        "https://my-flix-backend.herokuapp.com/removeWatchlist",
+        `${SERVER_URL}/removeWatchlist`,
         watchlistCheck
       );
       if (data.success) {

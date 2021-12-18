@@ -19,7 +19,7 @@ const Header = () => {
         <div className="col-12 lg:col-1 flex items-center justify-between">
           <span className="invisible">....</span>
           <Link to="/" className="text-lg font-bold text-red-500">
-            MyFlix
+            My Flix
           </Link>
           <Link to="/profile" className="lg:hidden">
             <ProfileIcon size={18} />
@@ -71,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header

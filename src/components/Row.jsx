@@ -27,4 +27,4 @@ const Row = ({ row }) => {
   );
 };
 
-export default Row;
+export default Row
