@@ -43,7 +43,7 @@ const Details = () => {
           content_id: details.id,
         };
         let { data } = await axios.post(
-          `${SERVER_URL}/checkWatchlist`,
+          "https://my-flix-backend.herokuapp.com/checkWatchlist",
           watchlistCheck
         );
         if (data.success) {
@@ -57,7 +57,7 @@ const Details = () => {
   }, [currentUser, details]);
 
   const handleWatchlistClick = async () => {
-    let { data } = await axios.post(`${SERVER_URL}/addWatchlist`, {
+    let { data } = await axios.post("https://my-flix-backend.herokuapp.com/addWatchlist", {
       id: currentUser.id,
       media_type: category,
       content_id: details.id,
@@ -78,7 +78,7 @@ const Details = () => {
         content_id: details.id,
       };
       let { data } = await axios.post(
-        `${SERVER_URL}/removeWatchlist`,
+        "https://my-flix-backend.herokuapp.com/removeWatchlist",
         watchlistCheck
       );
       if (data.success) {

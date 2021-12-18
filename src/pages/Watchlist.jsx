@@ -11,7 +11,7 @@ const Watchlist = () => {
 
   useEffect(() => {
     const fetchWatchlist = async () => {
-      let { data } = await axios.post(`${SERVER_URL}/getWatchlist`, {
+      let { data } = await axios.post("https://my-flix-backend.herokuapp.com/getWatchlist", {
         id: currentUser.id,
       });
       setWatchlist(data);
