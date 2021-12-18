@@ -8,7 +8,6 @@ import {
   getSimilar,
   IMAGE_BASE_URL,
   IMAGE_BASE_URL_HD,
-  SERVER_URL,
   YOUTUBE_BASE_URL,
   YOUTUBE_THUMBNAIL_URL,
 } from "../../requests";
