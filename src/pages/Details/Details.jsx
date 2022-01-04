@@ -224,7 +224,7 @@ const Details = () => {
                         {details?.videos?.results?.map(
                           (item, index) =>
                             index < 4 && (
-                              <div className="col-12 md:col-6" key={item.id}>
+                              <div className="col-12 md:col-4 m-3" key={item.id}>
                                 <a
                                   href={YOUTUBE_BASE_URL + item.key}
                                   target="_blank"
